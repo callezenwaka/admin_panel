@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin Panel</title>
+	<link rel="stylesheet" type="text/css" href="/font-awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Libre+Baskerville:700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="public/css/admin/dashboard.css">
+</head>
+<body>
+<div class="container">
+<div id="overlay" class="overlay"></div>
+	<header class="header" id="header">
+	<nav class="nav" id="nav">
+		<div class="Menubar" id="Menubar">
+			<div class="button" id="button">
+				  <div class="bar1"></div>
+				  <div class="bar2"></div>
+				  <div class="bar3"></div>
+			</div>
+			<a class="logo" id="logo" href="/" style="font-family: 'Kaushan Script', cursive;text-shadow: 4px 4px 4px rgba(51, 51, 51, 0.5);">SITE LOGO</a>
+			<div style="display: flex;">
+				<a href="#"><img class="profileImage" src="public/user/default.jpg" alt="user's image"></a>
+				<a style="margin: 10px;" href="#">Sign in</a>
+				<!-- <a href="{{ route('admin.logout') }}">Logout</a> -->
+			</div>
+		</div> <!-- End of Logo, search, open -->
+	</nav> <!-- End of small screen menu &#9587;-->
+</header> <!-- End of header -->
+
+	<section class="navbar" id="navbar">
+		<div>
+			<ul id="Menu" class="Menu">
+				<form method="POST" action="/" class="search" id="search">
+					<i class="fa fa-search" style="margin-left: 3px;" aria-hidden="true"></i>
+					<input placeholder="search"/>
+					<input type="hidden" name="submit">
+				</form>
+				<li class="{{ Request::is('dashboard.html') ? 'active' : '' }} dashboard"><a href="dashboard.html"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+				<li class="{{ Request::is('admin/home') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>Home</a></li>
+				<li class="{{ Request::is('admin/services') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Services</a></li>
+				<li class="{{ Request::is('admin/products') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Products</a></li>
+				<li class="{{ Request::is('admin/executive') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Executive</a></li>
+				<li class="{{ Request::is('admin/blog') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Blog</a></li>
+				<li class="{{ Request::is('admin/post') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Post</a></li>
+				<li class="{{ Request::is('admin/category') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Category</a></li>
+				<li class="{{ Request::is('admin/tag') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Tag</a></li>
+				<li class="{{ Request::is('admin/admin') ? 'active' : '' }}"><a href="#"><i class="fa fa-users" aria-hidden="true"></i>  Admins</a></li>
+				<li class="{{ Request::is('user') ? 'active' : '' }}"><a href="#"><i class="fa fa-users" aria-hidden="true"></i>  Users</a></li>
+				<li class="{{ Request::is('admin/permission') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Permission</a></li>
+				<li class="{{ Request::is('admin/role') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Role</a></li>
+				<li class="{{ Request::is('admin/reportsS') ? 'active' : '' }}"><a href="#"><i class="fa fa-list" aria-hidden="true"></i>  Reports</a></li>
+				<li><a href="https://twitter.com/callezenwaka">@callezenwaka</a></li>
+			</ul>
+		</div>
+		<div><a href="https://twitter.com/callezenwaka">@callezenwaka</a></div>
+	</section>
+
+	<section class="info">
+		<div class="events center">
+			<h1>Welcome, Content Goes Here!</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<div>
+				<label>Author on Github: </label>
+				<a href="https://github.com/callezenwaka">Call Ezenwaka</a>
+			</div>
+			<div>
+				<label>Author on Twitter: </label>
+				<a href="https://twitter.com/callezenwaka">Call Ezenwaka</a>
+			</div>
+		</div> <!-- End of news -->
+	</section> <!-- End of info section --> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="public/js/admin/dashboard.js"></script>
+</div>
+</body>
+</html>
